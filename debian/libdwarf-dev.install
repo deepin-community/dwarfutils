@@ -1,0 +1,4 @@
+usr/lib/*/*.so
+usr/lib/*/*.a
+usr/include/dwarf.h usr/include/libdwarf/
+usr/include/libdwarf.h usr/include/libdwarf/

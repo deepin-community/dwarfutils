@@ -1,0 +1,413 @@
+dwarfutils (20210528-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Upgrade to Standards-Version 4.6.0.
+  * Drop 00-timezone.patch and 01-spelling.patch (fixed upstream).
+  * Update years in debian/copyright.
+  * Update symbols file.
+  * Add patch 00-spelling.patch.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Sat, 11 Sep 2021 16:03:21 +0200
+
+dwarfutils (20201201-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update symbols file.
+  * Upgrade to Standards-Version 4.5.1.
+  * Update Vcs-Git and Vcs-Browser fields.
+  * Add 00-timezone.patch to fix a test case failure caused by the precise
+    output depending on the current time zone.
+  * Add 01-spelling.patch to fix the spelling errors found by Lintian.
+  * Update Lintian overrides.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Sat, 26 Dec 2020 14:54:07 +0100
+
+dwarfutils (20200825-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #963098).
+  * Update symbols file.
+  * Upgrade to debhelper compat level 13.
+  * Remove trailing slash from Vcs-Git field in debian/control.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Mon, 31 Aug 2020 14:36:01 +0200
+
+dwarfutils (20200114-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Make include-test more cross-test-friendly (thanks to Steve Langasek
+    <steve.langasek@canonical.com> for this!) (Closes: #948605).
+  * Update debian/copyright.
+  * Upgrade to Standards-Version 4.5.0.
+  * Update Lintian overrides.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Sat, 01 Feb 2020 18:51:20 +0100
+
+dwarfutils (20191104-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update symbols file.
+  * Update comments in debian/source/lintian-overrides.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Wed, 06 Nov 2019 21:52:10 +0100
+
+dwarfutils (20191002-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Upgrade to Standards-Version 4.4.1 (no changes).
+  * Add run-test and mark tests as superficial.
+  * Update symbols file.
+  * Update copyright years in debian/copyright.
+  * Add debian/missing-sources/ to add the source file for a test case.
+  * Add debian/source/lintian-overrides to override unjustified Lintian
+    tags about missing and prebuilt binaries (read the explanations
+    provided in that file for details).
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Tue, 05 Nov 2019 18:52:33 +0100
+
+dwarfutils (20190529-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Upgrade to Standards-Version 4.4.0 in debian/control (no changes).
+  * Remove 00-fix-flags.patch (fixed upstream).
+  * Update symbols file.
+  * Upgrade to debhelper compat level 12.
+  * Update debian/rules.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Sun, 25 Aug 2019 17:39:12 +0200
+
+dwarfutils (20180809-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Upgrade to Standards-Version 4.2.1 in debian/control (no changes).
+  * Update debian/copyright.
+  * Update package build scripts (the upstream build process changed).
+  * Update symbols file.
+  * Remove 01-fix-makefile.patch (fixed upstream).
+  * Add 00-fix-flags.patch to fix the warnings reported by blhc.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Wed, 29 Aug 2018 22:46:39 +0200
+
+dwarfutils (20180527-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #880771).
+  * Fix broken symlinks in the libdwarf1 and libdwarf-dev packages
+    (Closes: #891366).
+  * Upgrade to Standards-Version 4.1.4 in debian/control (no changes).
+  * Upgrade to debhelper compat level 11.
+  * Remove incorrect Multi-Arch: foreign annotation for the dwarfdump
+    package in debian/control.
+  * Refresh patch 01-fix-makefile.patch.
+  * Update symbols file.
+  * Delete trailing whitespace from debian/changelog in order to
+    silence the file-contains-trailing-whitespace Lintian tag.
+  * Enable rudimentary autopkgtest package testing.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Fri, 01 Jun 2018 12:26:43 +0200
+
+dwarfutils (20180129-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #880771).
+  * Remove Daniel Stender from Uploaders field in debian/control
+    (Closes: #882119).
+  * Upgrade to Standards-Version 4.1.3 in debian/control (no changes).
+  * Remove useless dh-autoreconf build dependency.
+  * Update Vcs-Git and Vcs-Browser fields in debian/control.
+  * Update 01-fix-makefile.patch.
+  * Update symbols file.
+  * Update debian/copyright.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Sat, 17 Feb 2018 15:15:20 +0100
+
+dwarfutils (20170709-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh patch 01-fix-makefile.patch.
+  * Remove patch 02-fix-CVE-2017-9998.patch (fixed upstream).
+  * Update symbols file.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Thu, 13 Jul 2017 21:01:23 +0200
+
+dwarfutils (20170416-3) unstable; urgency=medium
+
+  * Update debian/copyright.
+  * Upgrade to Standards-Version 4.0.0 in debian/control (no changes).
+  * Add patch 02-fix-CVE-2017-9998.patch to fix CVE-2017-9998
+    (Closes: #866968).
+  * Add override_dh_compress target in debian/rules to make sure the
+    upstream changelog is compressed (Closes: #866155).
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Fri, 07 Jul 2017 14:31:46 +0200
+
+dwarfutils (20170416-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Daniel Stender <stender@debian.org>  Sun, 18 Jun 2017 08:46:52 +0200
+
+dwarfutils (20170416-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Upgrade to debhelper compat level 10.
+  * Update symbols control file.
+
+ -- Daniel Stender <stender@debian.org>  Tue, 18 Apr 2017 19:10:57 +0200
+
+dwarfutils (20161124-1) unstable; urgency=medium
+
+  * New upstream release.
+     - Fixes CVE-2016-9275 (Closes: #844012).
+     - Fixes CVE-2016-9276 (Closes: #844011).
+     - Fixes CVE-2016-9558 (Closes: #845408).
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Fri, 25 Nov 2016 14:23:27 +0100
+
+dwarfutils (20161021-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Delete 02-CVE-2016-8680.patch and 03-CVE-2016-8679.patch (fixed upstream).
+
+  [Daniel Stender]
+  * add some cruft removal to Files-Excluded in deb/copyright.
+
+ -- Daniel Stender <stender@debian.org>  Fri, 28 Oct 2016 11:16:36 +0200
+
+dwarfutils (20161001-2) unstable; urgency=medium
+
+  * Add patch 02-CVE-2016-8680.patch to fix CVE-2016-8680 (Closes: #840960).
+  * Add patch 03-CVE-2016-8679.patch to fix both CVE-2016-8679 and
+    CVE-2016-8681 (the same fix applies to both issues)
+    (Closes: #840958, #840961).
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Thu, 20 Oct 2016 22:33:00 +0200
+
+dwarfutils (20161001-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Wed, 05 Oct 2016 16:14:02 +0200
+
+dwarfutils (20160929-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update symbols file.
+
+ -- Daniel Stender <stender@debian.org>  Fri, 30 Sep 2016 20:05:05 +0200
+
+dwarfutils (20160923-1) unstable; urgency=medium
+
+  * New upstream release.
+     - Fixes CVE-2016-7410 (Closes: #838019).
+     - Fixes CVE-2016-7510 (Closes: #838756).
+     - Fixes CVE-2016-7511 (Closes: #838757).
+  * Update patch 01-fix-makefile.patch.
+  * Remove patch 02-reproducibility.patch (fixed upstream).
+  * Update symbols file.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Sun, 25 Sep 2016 17:05:31 +0200
+
+dwarfutils (20160613-3) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Sun, 26 Jun 2016 14:11:57 +0200
+
+dwarfutils (20160613-2) experimental; urgency=medium
+
+  * Install header files into /usr/include/libdwarf.
+  * Remove "Conflicts: libdw-dev" from debian/control (Closes: #827921).
+
+    [ Daniel Stender ]
+  * Build with new upstream tarball (dwarfutils_20160613.orig.tar.xz), the
+    other one (.tar.gz) had cruft.
+  * deb/control: added myself as uploader.
+
+ -- Daniel Stender <stender@debian.org>  Fri, 24 Jun 2016 06:25:02 +0200
+
+dwarfutils (20160613-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove patch 02-remove-timestamps.patch (fixed upstream).
+  * Shrink patch 01-fix-makefile.patch (partially fixed upstream).
+  * Add patch 02-reproducibility.patch to further improve the
+    reproducibility of the build (Closes: #827382) (thanks to Reiner
+    Herrmann <reiner@reiner-h.de>).
+  * Add 2 new symbols to symbols file.
+  * Add Vcs-Git and Vcs-Browser fields to debian/control.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Wed, 22 Jun 2016 17:32:11 +0200
+
+dwarfutils (20160507+git20160523.9086738-2) unstable; urgency=medium
+
+  * Add debian/clean (thanks to Daniel Stender <stender@debian.org>).
+  * Fix broken symlink to libdwarf.so.1 (thanks to Daniel Stender)
+    (Closes: #827121).
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Tue, 14 Jun 2016 15:25:47 +0200
+
+dwarfutils (20160507+git20160523.9086738-1) unstable; urgency=medium
+
+  * New upstream development snapshot.
+     - Fixes CVE-2016-5038.
+     - Fixes CVE-2016-5036.
+     - Fixes CVE-2016-5035.
+     - Fixes CVE-2016-5034.
+     - Fixes CVE-2016-5033.
+     - Fixes CVE-2016-5032.
+     - Fixes CVE-2016-5031.
+     - Fixes CVE-2016-5030.
+     - Fixes CVE-2016-5029.
+     - Fixes CVE-2016-5028.
+     - Fixes CVE-2016-5027.
+     - Fixes CVE-2016-2050.
+  * Add zlib support by listing zlib1g-dev as a build dependency.
+    Detection is performed automatically by the configure script.
+  * Update upstream email address in debian/copyright.
+  * Install libraries into multiarch directories.
+     - Set Multi-Arch fields in debian/control.
+     - Add overwrite for dh_install in debian/rules.
+     - Adjust install paths for libdwarf-dev.
+  * Remove obsolete patch 02-fix-manpage.patch (fixed upstream).
+  * Update patch 01-fix-makefile.patch (partially fixed upstream &
+    some new issues).
+  * Add patch 02-remove-timestamps.patch to improve the reproducibility of
+    the build by using deterministic timestamps derived from
+    SOURCE_DATE_EPOCH (if available).
+  * Build and install shared library.
+     - Update package description for libdwarf-dev in debian/control.
+     - Add new package libdwarf1 in debian/control.
+     - Adjust debian/rules and add debian/libdwarf1.install to install
+       the shared library in the libdwarf1 package.
+     - Add symbols file for libdwarf1.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Fri, 03 Jun 2016 16:32:51 +0200
+
+dwarfutils (20160507-1) unstable; urgency=medium
+
+  * New Maintainer (Closes: #822614).
+  * New upstream release (Closes: #822154, #811817, #681748).
+     - Fixes CVE-2016-2091 (Closes: #813148).
+     - Fixes CVE-2015-8750 (Closes: #813182).
+     - Fixes CVE-2015-8538 (Closes: #807817).
+  * Upgrade to source format 3.0 (quilt).
+  * Upgrade to Standards version 3.9.8.
+  * Clean up debian/rules.
+  * Improve long description of dwarfdump (Closes: #659319).
+  * Perform complete copyright review.
+  * Update patches to DEP-3 format.
+  * Add doc-base file for libdwarf-dev.
+  * Compile with -fPIC.
+
+ -- Fabian Wolff <fabi.wolff@arcor.de>  Wed, 18 May 2016 17:11:18 +0200
+
+dwarfutils (20120410-2) unstable; urgency=low
+
+  * Fix FTBFS on Debian GNU/Hurd by Barry deFreese <bdefreese@debian.org>
+    (closes: #678173)
+
+ -- Troy Heber <troyh@debian.org>  Mon, 25 Jun 2012 09:42:10 -0600
+
+dwarfutils (20120410-1) unstable; urgency=low
+
+  * New upstream release 20120410.
+  * libdwarf.h: A pointer "*" was right next to a "/*" so a space introduced
+    between them for clarity. Fixed comments on DW_DLC_SIZE_64 and
+    DW_DLC_SIZE_32.
+  * dwarf_die_deliv.c: Two local variables were declared in the middle of
+    code, accidentally creating C99 dependencies. Both trivially fixed with
+    no change in logic.
+
+ -- Troy Heber <troyh@debian.org>  Mon, 21 May 2012 09:25:24 -0600
+
+dwarfutils (20111214-1) unstable; urgency=low
+
+  * New upstream release: 20111214.
+  * dwarfdump[2]: Added support for DW_OP_GNU operators. Enhanced the
+    extended-extensions table so known GNU tag-attr dependencies get no
+    warning.  Added support for DWARF3/4 line table values. libdwarf: Added
+    support for DW_OP_GNU operators. Added dwarf_lineoff_b() function making
+    dwarf_lineoff() obsolete (but still present). Added
+    dwarf_add_lineentry_b() as part of preparation for creating DWARF3/4 line
+    output (including isa and discriminator fields). Added
+    dwarf_prologue_end_etc() function to access line entry new fields. The
+    consumer documentation is now at version 2.02 and producer doc at version
+    1.32 . dwarfgen: Added example code generating line tables.
+  * Now libdwarf and dwarfdump/dwarfdump2 support reading and printing the
+    DWARF4 .debug_types section.
+  * dwarfdump2: Major change! Now works just like dwarfdump -- with the same
+    options and capabilities as dwarfdump but by taking advantage of C++
+    features it is simpler to read and a bit faster than C dwarfdump.
+    dwarfdump: Fixed some (minor) problems in detecting compilation units and
+    showing errors. libdwarf: Now a bit more robust in detecting errors in
+    object files
+  * Some minor changes. libdwarf: added -fPIC to enable-shared builds, and
+    implemented the ability to declare (in dwarfdump.conf) that address-size
+    is 4 or 8. dwarfdump: Fixed tsearch related call with a memory leak, added
+    a dwarfdump.conf example showing new includeabi: and address_size: command
+    lines, configure now sets HAVE_STDAFX_H if that header (non-Linux) exists,
+    verify checking is on before doing a duplicate-fde check. dwarfdump2:
+    verify checking is on before doing a duplicate-fde check.
+
+ -- Troy Heber <troyh@debian.org>  Fri, 16 Dec 2011 10:50:08 -0700
+
+dwarfutils (20110612-2) unstable; urgency=low
+
+  * Fix the description for dwarfdump to reflect it is built with the newer
+    C++ "dwarfdump2" version. (Closes: #633513)
+
+ -- Troy Heber <troyh@debian.org>  Tue, 12 Jul 2011 08:49:43 -0600
+
+dwarfutils (20110612-1) unstable; urgency=low
+
+  * New upstream version.
+  - A function is in the producer: dwarf_producer_init_c(). This provides a
+  user-defined void* pointer passed through from dwarf_producer_init_c() to
+  the callback so the user code can provide whatever data it wishes to itself
+  (in the callback). The library does not inspect the value in any way
+  - Now DW_FORM_sdata/udata allowed for DW_AT_data_member_location
+  - A very old bug (looking past the end of .debug_abbrev) fixed
+  - Added a new function making it easier to get the 'class' of an attribute.
+  Issues addressed, dwarfdump
+  - Corrected some line-table error checking and made the options work more
+  like they are described in a few cases
+  - Added a new function making it easier to get the 'class' of an
+  attribute.
+  - dwarfdump had unused local variables and critical missing () in two tests
+  made if statements incorrec
+  - One place = was used in a test erroneously
+  - The dwarfdump.1 man page is more informative about the -k options now
+
+ -- Troy Heber <troyh@debian.org>  Mon, 11 Jul 2011 14:51:21 -0600
+
+dwarfutils (20100214-1) unstable; urgency=low
+
+  * New upstream version.
+  - Dwarfdump now prints generic register names in frame printing instead of
+  using MIPS register names as the default
+  - Fixed libdwarf and dwarfdump to handle all DW_OP operators correctly
+  - Fixed libdwarf and dwarfdump to handle mismatch between elf63 object type
+  and compilation unity type (32bit).
+  - Fixed dwarfdump -M option to print all FORMs.
+
+ -- Troy Heber <troyh@debian.org>  Tue, 09 Mar 2010 08:25:12 -0700
+
+dwarfutils (20091012-1) unstable; urgency=low
+
+  * New upstream version.
+  - Lots of small bug fixes see the ChangeLog in the source for details
+  - Adds dwarfdump2 package
+  - Adds examples
+
+ -- Troy Heber <troyh@debian.org>  Thu, 05 Nov 2009 09:10:19 -0700
+
+dwarfutils (20080409-2) unstable; urgency=low
+
+  * conflicts with libdw-dev, as both packages provide /usr/include/dwarf.h,
+    (Closes: #479503)
+
+ -- Troy Heber <troyh@debian.org>  Mon, 05 May 2008 07:31:47 -0600
+
+dwarfutils (20080409-1) unstable; urgency=low
+
+  * Initial Release (Closes: #447775)
+
+ -- Troy Heber <troyh@debian.org>  Wed, 16 Apr 2008 09:49:33 -0600

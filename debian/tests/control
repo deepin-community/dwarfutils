@@ -1,0 +1,3 @@
+Tests: include-test run-test
+Depends: @, build-essential
+Restrictions: superficial

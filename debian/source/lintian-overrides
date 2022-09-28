@@ -1,0 +1,32 @@
+# Lintian does not always find the source for these files, but the
+# source does actually exist (I've also discussed this with the
+# libdwarf upstream developer):
+#
+#  dwarfdump/testuriLE64ELf.*
+#    -> dwarfdump/uri.c
+dwarfutils source: source-is-missing dwarfdump/testuriLE64ELf.obj
+#
+#  dwarfdump/testobjLE32PE.*
+#    -> dwarfdump/testobjLE32PE.test.c
+#
+#  dwarfdump/test-mach-o-32.*
+#    -> dwarfexample/simplereader.c
+#
+#  dwarfexample/dummyexecutable.*
+#    -> dwarfexample/dummyexecutable.c
+dwarfutils source: source-is-missing dwarfexample/dummyexecutable.debug
+#
+# These files probably are not what the Lintian authors had in mind
+# when creating the source-contains-prebuilt[-windows]-binary tags:
+# dwarfdump is a utility that works on binary files, so the binary
+# files shipped in its source code are not executables or libraries
+# meant to be executed/linked against by the end user, but rather,
+# they serve as input to the dwarfdump utility in order to test it.
+# In order to make the test output predictable, it is convenient to
+# ship the exact binary that the expected test output refers to; this
+# is a very special case when it comes to distributing prebuilt
+# binaries, so I think the following Lintian tags don't apply here:
+dwarfutils source: source-contains-prebuilt-windows-binary dwarfdump/testobjLE32PE.exe
+dwarfutils source: source-contains-prebuilt-binary dwarfdump/testuriLE64ELf.obj
+dwarfutils source: source-contains-prebuilt-binary dwarfexample/dummyexecutable
+dwarfutils source: source-contains-prebuilt-binary dwarfexample/dummyexecutable.debug

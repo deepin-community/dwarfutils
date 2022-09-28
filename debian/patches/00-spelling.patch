@@ -1,0 +1,17 @@
+Description: Fix a spelling error found by Lintian
+Author: Fabian Wolff <fabi.wolff@arcor.de>
+Forwarded: yes
+Last-Update: 2021-09-11
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/dwarfdump/print_die.c
++++ b/dwarfdump/print_die.c
+@@ -5559,7 +5559,7 @@
+                 off = off + targ;
+                 if (off < 0 ) {
+                     esb_append_printf_i(string_out,
+-                        " <ERROR. branch/skip target erronous %d>",
++                        " <ERROR. branch/skip target erroneous %d>",
+                         off);
+                     glflags.gf_count_major_errors++;
+                 } else {

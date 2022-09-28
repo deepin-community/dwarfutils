@@ -1,0 +1,25 @@
+#!/bin/sh
+
+set -e
+
+# Make sure the libdwarf headers and library are installed and usable
+
+if [ -n "${DEB_HOST_GNU_TYPE:-}" ]; then
+    CROSS_COMPILE="$DEB_HOST_GNU_TYPE-"
+else
+    CROSS_COMPILE=
+fi
+
+TMPDIR=$(mktemp -d)
+trap "rm -rf $TMPDIR" EXIT
+cd $TMPDIR
+
+cat <<EOF > test-include.c
+#include <libdwarf/dwarf.h>
+#include <libdwarf/libdwarf.h>
+int main () { return 0; }
+EOF
+
+${CROSS_COMPILE}gcc -o test-include test-include.c -ldwarf
+[ -x test-include ]
+./test-include

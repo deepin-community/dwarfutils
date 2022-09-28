@@ -1,0 +1,13 @@
+Document: libdwarf-dev
+Title: Libdwarf API documentation
+Author: David Anderson
+Abstract: These documents describe the producer and consumer
+ interfaces to libdwarf, a library of functions to provide access to
+ DWARF debugging information records. A document describing MIPS
+ extensions to the DWARF format is also included.
+Section: Programming
+
+Format: PDF
+Files: /usr/share/doc/libdwarf-dev/libdwarf2.1.pdf.gz
+       /usr/share/doc/libdwarf-dev/libdwarf2p.1.pdf.gz
+       /usr/share/doc/libdwarf-dev/mips_extensions.pdf.gz
